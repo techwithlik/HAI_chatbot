@@ -101,8 +101,7 @@ def intent_matching(user_response):
     username_val = similarity(uname_inputs, user_response).max()
 
     val_arr = [ans_val, smalltalk_val, greeting_val, date_time_val, username_val]
-    print("The maximum similarity scores in each category are ")
-    print(val_arr)
+    # print(val_arr)
 
     if max(val_arr) < 0.5:
         return qa_response(user_response, qa_ques)
